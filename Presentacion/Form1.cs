@@ -36,5 +36,15 @@ namespace Presentacion
         {
 
         }
+
+        private void btnAltaLibro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminarLibro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

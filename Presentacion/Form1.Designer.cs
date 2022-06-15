@@ -59,16 +59,17 @@
             // 
             // btnEliminarLibro
             // 
-            this.btnEliminarLibro.Location = new System.Drawing.Point(369, 80);
+            this.btnEliminarLibro.Location = new System.Drawing.Point(314, 61);
             this.btnEliminarLibro.Name = "btnEliminarLibro";
             this.btnEliminarLibro.Size = new System.Drawing.Size(145, 43);
             this.btnEliminarLibro.TabIndex = 2;
             this.btnEliminarLibro.Text = "Eliminar Libro";
             this.btnEliminarLibro.UseVisualStyleBackColor = true;
+            this.btnEliminarLibro.Click += new System.EventHandler(this.btnEliminarLibro_Click);
             // 
             // btnModificacionLibro
             // 
-            this.btnModificacionLibro.Location = new System.Drawing.Point(188, 80);
+            this.btnModificacionLibro.Location = new System.Drawing.Point(163, 61);
             this.btnModificacionLibro.Name = "btnModificacionLibro";
             this.btnModificacionLibro.Size = new System.Drawing.Size(145, 43);
             this.btnModificacionLibro.TabIndex = 3;
@@ -78,12 +79,13 @@
             // 
             // btnAltaLibro
             // 
-            this.btnAltaLibro.Location = new System.Drawing.Point(12, 80);
+            this.btnAltaLibro.Location = new System.Drawing.Point(12, 61);
             this.btnAltaLibro.Name = "btnAltaLibro";
             this.btnAltaLibro.Size = new System.Drawing.Size(145, 43);
             this.btnAltaLibro.TabIndex = 4;
             this.btnAltaLibro.Text = "Alta Libro";
             this.btnAltaLibro.UseVisualStyleBackColor = true;
+            this.btnAltaLibro.Click += new System.EventHandler(this.btnAltaLibro_Click);
             // 
             // dataGridView1
             // 
