@@ -32,5 +32,9 @@ namespace Presentacion
             lblResultado.Visible = true;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

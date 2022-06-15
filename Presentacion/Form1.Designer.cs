@@ -28,39 +28,85 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnPrueba = new System.Windows.Forms.Button();
+            this.btnPruebaConexion = new System.Windows.Forms.Button();
             this.lblResultado = new System.Windows.Forms.Label();
+            this.btnEliminarLibro = new System.Windows.Forms.Button();
+            this.btnModificacionLibro = new System.Windows.Forms.Button();
+            this.btnAltaLibro = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnPrueba
+            // btnPruebaConexion
             // 
-            this.btnPrueba.Location = new System.Drawing.Point(195, 77);
-            this.btnPrueba.Name = "btnPrueba";
-            this.btnPrueba.Size = new System.Drawing.Size(145, 43);
-            this.btnPrueba.TabIndex = 0;
-            this.btnPrueba.Text = "Prueba de conexión";
-            this.btnPrueba.UseVisualStyleBackColor = true;
-            this.btnPrueba.Click += new System.EventHandler(this.btnPrueba_Click);
+            this.btnPruebaConexion.Location = new System.Drawing.Point(12, 12);
+            this.btnPruebaConexion.Name = "btnPruebaConexion";
+            this.btnPruebaConexion.Size = new System.Drawing.Size(145, 43);
+            this.btnPruebaConexion.TabIndex = 0;
+            this.btnPruebaConexion.Text = "Prueba de conexión";
+            this.btnPruebaConexion.UseVisualStyleBackColor = true;
+            this.btnPruebaConexion.Click += new System.EventHandler(this.btnPrueba_Click);
             // 
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(368, 92);
+            this.lblResultado.Location = new System.Drawing.Point(185, 27);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(35, 13);
             this.lblResultado.TabIndex = 1;
             this.lblResultado.Text = "label1";
             this.lblResultado.Visible = false;
             // 
+            // btnEliminarLibro
+            // 
+            this.btnEliminarLibro.Location = new System.Drawing.Point(369, 80);
+            this.btnEliminarLibro.Name = "btnEliminarLibro";
+            this.btnEliminarLibro.Size = new System.Drawing.Size(145, 43);
+            this.btnEliminarLibro.TabIndex = 2;
+            this.btnEliminarLibro.Text = "Eliminar Libro";
+            this.btnEliminarLibro.UseVisualStyleBackColor = true;
+            // 
+            // btnModificacionLibro
+            // 
+            this.btnModificacionLibro.Location = new System.Drawing.Point(188, 80);
+            this.btnModificacionLibro.Name = "btnModificacionLibro";
+            this.btnModificacionLibro.Size = new System.Drawing.Size(145, 43);
+            this.btnModificacionLibro.TabIndex = 3;
+            this.btnModificacionLibro.Text = "Modificación Libro";
+            this.btnModificacionLibro.UseVisualStyleBackColor = true;
+            this.btnModificacionLibro.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnAltaLibro
+            // 
+            this.btnAltaLibro.Location = new System.Drawing.Point(12, 80);
+            this.btnAltaLibro.Name = "btnAltaLibro";
+            this.btnAltaLibro.Size = new System.Drawing.Size(145, 43);
+            this.btnAltaLibro.TabIndex = 4;
+            this.btnAltaLibro.Text = "Alta Libro";
+            this.btnAltaLibro.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 154);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(698, 284);
+            this.dataGridView1.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(722, 450);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnAltaLibro);
+            this.Controls.Add(this.btnModificacionLibro);
+            this.Controls.Add(this.btnEliminarLibro);
             this.Controls.Add(this.lblResultado);
-            this.Controls.Add(this.btnPrueba);
+            this.Controls.Add(this.btnPruebaConexion);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,8 +114,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnPrueba;
+        private System.Windows.Forms.Button btnPruebaConexion;
         private System.Windows.Forms.Label lblResultado;
+        private System.Windows.Forms.Button btnEliminarLibro;
+        private System.Windows.Forms.Button btnModificacionLibro;
+        private System.Windows.Forms.Button btnAltaLibro;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
