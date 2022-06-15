@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio;
+
 
 namespace Presentacion
 {
@@ -16,5 +18,19 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void btnPrueba_Click(object sender, EventArgs e)
+        {
+            if (new Negocio.Management.PruebaDeConexion().pruebaDeConexion())
+            {
+                lblResultado.Text = "La conexión SI es correcta";
+            }
+            else
+            {
+                lblResultado.Text = "La conexión NO es correcta";
+            }
+            lblResultado.Visible = true;
+        }
+
     }
 }
