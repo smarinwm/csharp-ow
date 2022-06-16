@@ -44,6 +44,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="EntitiesDTO\LibroConUnidadesDTO.cs" />
     <Compile Include="EntitiesDTO\LibrosDTO.cs" />
+    <Compile Include="Management\LibroManagement.cs" />
     <Compile Include="Management\PruebaDeConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
