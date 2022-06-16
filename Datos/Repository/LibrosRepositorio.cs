@@ -14,9 +14,9 @@ namespace Datos.Repository
             List<Libro> listadoRetorno = new List<Libro>();
             try
             {
-                using( var contexto = new BibliotecaEntities())
+                using (var contexto = new BibliotecaEntities())
                 {
-                   listadoRetorno= contexto.Libroes.ToList();
+                    listadoRetorno = contexto.Libroes.ToList();
                 }
                 return listadoRetorno;
             }
@@ -63,5 +63,21 @@ namespace Datos.Repository
                 return listadoRetorno;
             }
         }
+
+        public void AltaLibro(Libro libroAlta)
+        {
+
+            using (var contexto = new BibliotecaEntities())
+            {
+                contexto.Libroes.Add(libroAlta);
+                contexto.SaveChanges();
+            }
+
+
+
+
+        }
+
+
     }
 }
