@@ -34,6 +34,8 @@
             this.btnModificacionLibro = new System.Windows.Forms.Button();
             this.btnAltaLibro = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnConsultaLibros = new System.Windows.Forms.Button();
+            this.btnConsultaLibrosUnidades = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,16 +92,36 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 154);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 174);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(698, 284);
             this.dataGridView1.TabIndex = 5;
+            // 
+            // btnConsultaLibros
+            // 
+            this.btnConsultaLibros.Location = new System.Drawing.Point(12, 110);
+            this.btnConsultaLibros.Name = "btnConsultaLibros";
+            this.btnConsultaLibros.Size = new System.Drawing.Size(145, 43);
+            this.btnConsultaLibros.TabIndex = 6;
+            this.btnConsultaLibros.Text = "Consulta Libros";
+            this.btnConsultaLibros.UseVisualStyleBackColor = true;
+            // 
+            // btnConsultaLibrosUnidades
+            // 
+            this.btnConsultaLibrosUnidades.Location = new System.Drawing.Point(163, 110);
+            this.btnConsultaLibrosUnidades.Name = "btnConsultaLibrosUnidades";
+            this.btnConsultaLibrosUnidades.Size = new System.Drawing.Size(145, 43);
+            this.btnConsultaLibrosUnidades.TabIndex = 7;
+            this.btnConsultaLibrosUnidades.Text = "Consulta Libros Unidades";
+            this.btnConsultaLibrosUnidades.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 450);
+            this.ClientSize = new System.Drawing.Size(722, 470);
+            this.Controls.Add(this.btnConsultaLibrosUnidades);
+            this.Controls.Add(this.btnConsultaLibros);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAltaLibro);
             this.Controls.Add(this.btnModificacionLibro);
@@ -122,6 +144,8 @@
         private System.Windows.Forms.Button btnModificacionLibro;
         private System.Windows.Forms.Button btnAltaLibro;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnConsultaLibros;
+        private System.Windows.Forms.Button btnConsultaLibrosUnidades;
     }
 }
 
