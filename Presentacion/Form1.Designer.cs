@@ -45,7 +45,7 @@
             this.btnPruebaConexion.Name = "btnPruebaConexion";
             this.btnPruebaConexion.Size = new System.Drawing.Size(145, 43);
             this.btnPruebaConexion.TabIndex = 0;
-            this.btnPruebaConexion.Text = "Prueba de conexión";
+            this.btnPruebaConexion.Text = "Prueba de conexión BBDD";
             this.btnPruebaConexion.UseVisualStyleBackColor = true;
             this.btnPruebaConexion.Click += new System.EventHandler(this.btnPrueba_Click);
             // 
