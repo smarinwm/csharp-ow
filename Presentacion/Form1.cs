@@ -46,5 +46,17 @@ namespace Presentacion
         {
 
         }
+
+        private void btnConsultaLibros_Click(object sender, EventArgs e)
+        {
+            
+            dgwLibros.DataSource = new Negocio.Management.LibroManagement().ObtenerLibros();
+
+        }
+
+        private void btnConsultaLibrosUnidades_Click(object sender, EventArgs e)
+        {
+            dgwLibros.DataSource = new Negocio.Management.LibroManagement().ObtenerLibrosUnidades();
+        }
     }
 }

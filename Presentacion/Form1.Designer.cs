@@ -33,10 +33,10 @@
             this.btnEliminarLibro = new System.Windows.Forms.Button();
             this.btnModificacionLibro = new System.Windows.Forms.Button();
             this.btnAltaLibro = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgwLibros = new System.Windows.Forms.DataGridView();
             this.btnConsultaLibros = new System.Windows.Forms.Button();
             this.btnConsultaLibrosUnidades = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwLibros)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPruebaConexion
@@ -89,13 +89,13 @@
             this.btnAltaLibro.UseVisualStyleBackColor = true;
             this.btnAltaLibro.Click += new System.EventHandler(this.btnAltaLibro_Click);
             // 
-            // dataGridView1
+            // dgwLibros
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 174);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(698, 284);
-            this.dataGridView1.TabIndex = 5;
+            this.dgwLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwLibros.Location = new System.Drawing.Point(12, 174);
+            this.dgwLibros.Name = "dgwLibros";
+            this.dgwLibros.Size = new System.Drawing.Size(698, 284);
+            this.dgwLibros.TabIndex = 5;
             // 
             // btnConsultaLibros
             // 
@@ -105,6 +105,7 @@
             this.btnConsultaLibros.TabIndex = 6;
             this.btnConsultaLibros.Text = "Consulta Libros";
             this.btnConsultaLibros.UseVisualStyleBackColor = true;
+            this.btnConsultaLibros.Click += new System.EventHandler(this.btnConsultaLibros_Click);
             // 
             // btnConsultaLibrosUnidades
             // 
@@ -114,6 +115,7 @@
             this.btnConsultaLibrosUnidades.TabIndex = 7;
             this.btnConsultaLibrosUnidades.Text = "Consulta Libros Unidades";
             this.btnConsultaLibrosUnidades.UseVisualStyleBackColor = true;
+            this.btnConsultaLibrosUnidades.Click += new System.EventHandler(this.btnConsultaLibrosUnidades_Click);
             // 
             // Form1
             // 
@@ -122,7 +124,7 @@
             this.ClientSize = new System.Drawing.Size(722, 470);
             this.Controls.Add(this.btnConsultaLibrosUnidades);
             this.Controls.Add(this.btnConsultaLibros);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgwLibros);
             this.Controls.Add(this.btnAltaLibro);
             this.Controls.Add(this.btnModificacionLibro);
             this.Controls.Add(this.btnEliminarLibro);
@@ -130,7 +132,7 @@
             this.Controls.Add(this.btnPruebaConexion);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwLibros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,7 +145,7 @@
         private System.Windows.Forms.Button btnEliminarLibro;
         private System.Windows.Forms.Button btnModificacionLibro;
         private System.Windows.Forms.Button btnAltaLibro;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgwLibros;
         private System.Windows.Forms.Button btnConsultaLibros;
         private System.Windows.Forms.Button btnConsultaLibrosUnidades;
     }
