@@ -54,6 +54,16 @@ namespace Negocio.Management
             return ListadoRetorno;
         }
 
+        public void AltaLibro(LibrosDTO libroAlta)
+        {
+
+            Libro libro = new Libro();
+            libro.idCategoria = libroAlta.idCategoria;
+            libro.Nombre = libroAlta.Nombre;
+            libro.Autor = libroAlta.Autor;
+            libro.FechaPublicacion = libroAlta.FechaPublicacion;
+            new Datos.Repository.LibrosRepositorio().AltaLibro(libro);
+        }
 
         public List<LibroConUnidadesDTO> ObtenerLibrosUnidades()
         {
