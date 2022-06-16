@@ -26,6 +26,22 @@ namespace Datos.Repository
                 return listadoRetorno;
             }
         }
-        public List<Libro> 
+        public List<ObtenerLibrosConUnidades_Result> ObtenerLibrosConUnidades()
+        {
+            List<ObtenerLibrosConUnidades_Result> listadoRetorno = new List<ObtenerLibrosConUnidades_Result>();
+            try
+            {
+                using (var contexto = new BibliotecaEntities())
+                {
+                    listadoRetorno = contexto.ObtenerLibrosConUnidades().ToList();
+                }
+                return listadoRetorno;
+            }
+            catch
+            {
+
+                return listadoRetorno;
+            }
+        }
     }
 }
