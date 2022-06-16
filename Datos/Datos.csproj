@@ -85,7 +85,7 @@
       <DependentUpon>BibliotecaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\LibrosRepisitorio.cs" />
+    <Compile Include="Repository\LibrosRepositorio.cs" />
     <Compile Include="Repository\PruebaDeConexion.cs" />
   </ItemGroup>
   <ItemGroup />

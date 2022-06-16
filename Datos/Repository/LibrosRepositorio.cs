@@ -7,7 +7,7 @@ using Datos.Infrastructure;
 
 namespace Datos.Repository
 {
-    public class LibrosRepisitorio
+    public class LibrosRepositorio
     {
         public List<Libro> ObtenerLibros()
         {
