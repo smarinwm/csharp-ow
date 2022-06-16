@@ -42,6 +42,7 @@ namespace Presentacion
         {
             AltaLibro pantallaAlta = new AltaLibro();
             pantallaAlta.ShowDialog();
+            dgwLibros.DataSource = new Negocio.Management.LibroManagement().ObtenerLibros();
 
         }
 

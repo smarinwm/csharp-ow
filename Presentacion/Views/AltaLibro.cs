@@ -26,6 +26,9 @@ namespace Presentacion.Views
             libro.Autor = txtAutor.Text;
             libro.idCategoria = new Negocio.Management.LibroManagement().ObtenerCategorias().Where(b => b.Nombre == cmbCategoriaLibro.Text).First().idCategoria;
             libro.FechaPublicacion = DateTime.Now;
+
+            new Negocio.Management.LibroManagement().AltaLibro(libro);
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
