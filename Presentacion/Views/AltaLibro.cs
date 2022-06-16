@@ -31,5 +31,10 @@ namespace Presentacion.Views
         {
             this.Close();
         }
+
+        private void AltaLibro_Load(object sender, EventArgs e)
+        {
+            cmbCategoriaLibro.DataSource = new Negocio.Management.LibroManagement().ObtenerCategorias().Select(b => b.Nombre).ToList();
+        }
     }
 }

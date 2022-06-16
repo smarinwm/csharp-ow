@@ -143,6 +143,7 @@
             this.Controls.Add(this.txtNombre);
             this.Name = "AltaLibro";
             this.Text = "AltaLibro";
+            this.Load += new System.EventHandler(this.AltaLibro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
