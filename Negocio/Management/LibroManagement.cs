@@ -34,6 +34,25 @@ namespace Negocio.Management
             return ListadoRetorno;
         }
 
+        public List<LibroConUnidadesDTO> ObtenerLibrosUnidades()
+        {
+
+            List<ObtenerLibrosConUnidades_Result> LibrosDatos = new Datos.Repository.LibrosRepositorio().ObtenerLibrosConUnidades();
+            List<LibroConUnidadesDTO> ListadoRetorno = new List<LibroConUnidadesDTO>();
+
+            foreach (var item in LibrosDatos)
+            {
+                LibroConUnidadesDTO librosDTO = new LibroConUnidadesDTO();
+
+                librosDTO.AutorDelLibro = item.AutorDelLibro;
+                librosDTO.NombreDelLibro = item.NombreDelLibro;
+                librosDTO.Unidades = item.Unidades;
+
+                ListadoRetorno.Add(librosDTO);
+
+            }
+            return ListadoRetorno;
+        }
 
     }
 }
