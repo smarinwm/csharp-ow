@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
+using Presentacion.Views;
 
 
 namespace Presentacion
@@ -39,6 +40,8 @@ namespace Presentacion
 
         private void btnAltaLibro_Click(object sender, EventArgs e)
         {
+            AltaLibro pantallaAlta = new AltaLibro();
+            pantallaAlta.ShowDialog();
 
         }
 

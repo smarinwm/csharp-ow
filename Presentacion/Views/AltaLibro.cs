@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio.EntitiesDTO;
+using Negocio.Management;
 
 namespace Presentacion.Views
 {
@@ -19,12 +21,15 @@ namespace Presentacion.Views
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-
+            LibrosDTO libro = new LibrosDTO();
+            libro.Nombre = txtNombre.Text;
+            libro.Autor = txtAutor.Text;
+            libro.idCategoria = cmbCategoriaLibro.SelectedIndex;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

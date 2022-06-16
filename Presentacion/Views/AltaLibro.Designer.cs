@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombreLibro = new System.Windows.Forms.Label();
             this.lblAutorLibro = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAutor = new System.Windows.Forms.TextBox();
             this.lblCategoriaLibro = new System.Windows.Forms.Label();
             this.lblEstadoLibro = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -40,12 +40,12 @@
             this.cmbEstadoLibro = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(101, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtNombre.Location = new System.Drawing.Point(101, 23);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(215, 20);
+            this.txtNombre.TabIndex = 0;
             // 
             // lblNombreLibro
             // 
@@ -65,12 +65,12 @@
             this.lblAutorLibro.TabIndex = 3;
             this.lblAutorLibro.Text = "Autor";
             // 
-            // textBox2
+            // txtAutor
             // 
-            this.textBox2.Location = new System.Drawing.Point(101, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(215, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtAutor.Location = new System.Drawing.Point(101, 64);
+            this.txtAutor.Name = "txtAutor";
+            this.txtAutor.Size = new System.Drawing.Size(215, 20);
+            this.txtAutor.TabIndex = 2;
             // 
             // lblCategoriaLibro
             // 
@@ -138,9 +138,9 @@
             this.Controls.Add(this.lblEstadoLibro);
             this.Controls.Add(this.lblCategoriaLibro);
             this.Controls.Add(this.lblAutorLibro);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtAutor);
             this.Controls.Add(this.lblNombreLibro);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNombre);
             this.Name = "AltaLibro";
             this.Text = "AltaLibro";
             this.ResumeLayout(false);
@@ -150,10 +150,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombreLibro;
         private System.Windows.Forms.Label lblAutorLibro;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAutor;
         private System.Windows.Forms.Label lblCategoriaLibro;
         private System.Windows.Forms.Label lblEstadoLibro;
         private System.Windows.Forms.Button btnAceptar;

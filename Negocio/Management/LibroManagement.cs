@@ -34,6 +34,27 @@ namespace Negocio.Management
             return ListadoRetorno;
         }
 
+
+        public List<CategoriaDTO> ObtenerCategorias()
+        {
+
+            List<Categoria> LibrosDatos = new Datos.Repository.LibrosRepositorio().ObtenerCategorias();
+            List<CategoriaDTO> ListadoRetorno = new List<CategoriaDTO>();
+
+            foreach (var item in LibrosDatos)
+            {
+                CategoriaDTO categoriaDTO = new CategoriaDTO();
+
+                categoriaDTO.idCategoria = item.idCategoria;
+                categoriaDTO.Nombre = item.Nombre;
+
+                ListadoRetorno.Add(categoriaDTO);
+
+            }
+            return ListadoRetorno;
+        }
+
+
         public List<LibroConUnidadesDTO> ObtenerLibrosUnidades()
         {
 
