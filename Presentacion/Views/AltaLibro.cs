@@ -24,7 +24,8 @@ namespace Presentacion.Views
             LibrosDTO libro = new LibrosDTO();
             libro.Nombre = txtNombre.Text;
             libro.Autor = txtAutor.Text;
-            libro.idCategoria = cmbCategoriaLibro.SelectedIndex;
+            libro.idCategoria = new Negocio.Management.LibroManagement().ObtenerCategorias().Where(b => b.Nombre == cmbCategoriaLibro.Text).First().idCategoria;
+            libro.FechaPublicacion = DateTime.Now;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
