@@ -100,14 +100,14 @@ namespace Datos.Repository
 
             using (var contexto = new BibliotecaEntities())
             {
-                List<LibrosUnidades> libroConUnidades = contexto.LibrosUnidades.Where(b => b.idLibroUnidades == idLibro).ToList();
+                List<LibrosUnidade> libroUnidades = contexto.LibrosUnidades.Where(b => b.idLibro == idLibro).ToList();
                 Libro libroEliminar = contexto.Libroes.Where(b => b.idLibro == idLibro).First();
 
-                if (libroConUnidades.Count > 0)
+                if (libroUnidades.Count > 0)
                 {
-                    contexto.LibrosUnidades.RemoveRange(libroConUnidades);
+                    contexto.LibrosUnidades.RemoveRange(libroUnidades);
                     contexto.Entry(libroEliminar).State = System.Data.Entity.EntityState.Deleted;
-
+                    contexto.SaveChanges();
                 }
                 else
                 {
@@ -115,12 +115,13 @@ namespace Datos.Repository
                     contexto.SaveChanges();
                 }
 
-
             }
 
+
+
+
+
         }
-
-
 
     }
 }

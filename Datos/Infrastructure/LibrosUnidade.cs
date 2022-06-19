@@ -12,10 +12,10 @@ namespace Datos.Infrastructure
     using System;
     using System.Collections.Generic;
     
-    public partial class LibrosUnidades
+    public partial class LibrosUnidade
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public LibrosUnidades()
+        public LibrosUnidade()
         {
             this.Ventas = new HashSet<Venta>();
         }

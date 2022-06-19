@@ -72,7 +72,7 @@
     <Compile Include="Infrastructure\Libro.cs">
       <DependentUpon>BibliotecaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\LibrosUnidades.cs">
+    <Compile Include="Infrastructure\LibrosUnidade.cs">
       <DependentUpon>BibliotecaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ObtenerLibrosConUnidades_Result.cs">

@@ -29,7 +29,7 @@ namespace Datos.Infrastructure
     
         public virtual DbSet<Categoria> Categorias { get; set; }
         public virtual DbSet<Libro> Libroes { get; set; }
-        public virtual DbSet<LibrosUnidades> LibrosUnidades { get; set; }
+        public virtual DbSet<LibrosUnidade> LibrosUnidades { get; set; }
         public virtual DbSet<Ubicacion> Ubicacions { get; set; }
         public virtual DbSet<Venta> Ventas { get; set; }
     
