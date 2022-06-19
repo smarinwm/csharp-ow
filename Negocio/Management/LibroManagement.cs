@@ -65,6 +65,20 @@ namespace Negocio.Management
             new Datos.Repository.LibrosRepositorio().AltaLibro(libro);
         }
 
+        public void ModificarLibro(LibrosDTO libroModificado)
+        {
+            Libro libro = new Libro();
+            libro.idLibro = libroModificado.idLibro;
+            libro.idCategoria = libroModificado.idCategoria;
+            libro.Nombre = libroModificado.Nombre;
+            libro.Autor = libroModificado.Autor;
+            libro.FechaPublicacion = libroModificado.FechaPublicacion;
+
+            new Datos.Repository.LibrosRepositorio().ModificarLibro(libro);
+
+        }
+
+
         public List<LibroConUnidadesDTO> ObtenerLibrosUnidades()
         {
 
