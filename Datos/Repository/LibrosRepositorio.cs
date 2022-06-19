@@ -97,7 +97,7 @@ namespace Datos.Repository
         }
 
 
-        public void EliminarLibro(Int16 idLibro)
+        public void EliminarLibro(Int32 idLibro)
         {
             try
             {

@@ -79,6 +79,14 @@ namespace Negocio.Management
         }
 
 
+        public void EliminarLibro(LibrosDTO libroEliminar)
+        {
+            new Datos.Repository.LibrosRepositorio().EliminarLibro(libroEliminar.idLibro);
+
+
+        }
+
+
         public List<LibroConUnidadesDTO> ObtenerLibrosUnidades()
         {
 
