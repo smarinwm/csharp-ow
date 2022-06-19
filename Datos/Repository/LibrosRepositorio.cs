@@ -117,9 +117,17 @@ namespace Datos.Repository
 
             }
 
+        }
 
-
-
+        public Boolean VerificarUnidades(Int32 idLibro)
+        {
+            List<LibrosUnidade> libroConUnidades = new List<LibrosUnidade>();  
+            using (var contexto = new BibliotecaEntities())
+            {
+                libroConUnidades = contexto.LibrosUnidades.Where(b => b.idLibro == idLibro).ToList();
+            }
+                return libroConUnidades.Count > 0;
+            
 
         }
 
