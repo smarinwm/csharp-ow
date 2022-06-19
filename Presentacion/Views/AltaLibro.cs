@@ -14,6 +14,14 @@ namespace Presentacion.Views
 {
     public partial class AltaLibro : Form
     {
+        public LibrosDTO libroMod;
+        public AltaLibro(LibrosDTO libro)
+        {
+            libroMod = libro;
+            InitializeComponent();
+        }
+
+
         public AltaLibro()
         {
             InitializeComponent();
@@ -29,6 +37,8 @@ namespace Presentacion.Views
 
             new Negocio.Management.LibroManagement().AltaLibro(libro);
 
+            this.Close();
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -39,6 +49,15 @@ namespace Presentacion.Views
         private void AltaLibro_Load(object sender, EventArgs e)
         {
             cmbCategoriaLibro.DataSource = new Negocio.Management.LibroManagement().ObtenerCategorias().Select(b => b.Nombre).ToList();
+
+            if (libroMod != null)
+            {
+                txtNombre.Text = libroMod.Nombre;
+                txtAutor.Text = libroMod.Autor;
+                cmbCategoriaLibro.Text = new Negocio.Management.LibroManagement().ObtenerCategorias().Where(b => b.idCategoria == libroMod.idCategoria).First().Nombre;
+               
+            }
+            
         }
     }
 }

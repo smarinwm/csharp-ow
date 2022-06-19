@@ -142,7 +142,7 @@
             this.Controls.Add(this.lblNombreLibro);
             this.Controls.Add(this.txtNombre);
             this.Name = "AltaLibro";
-            this.Text = "AltaLibro";
+            this.Text = "Alta y Modificación Libros";
             this.Load += new System.EventHandler(this.AltaLibro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

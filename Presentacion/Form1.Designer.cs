@@ -31,7 +31,7 @@
             this.btnPruebaConexion = new System.Windows.Forms.Button();
             this.lblResultado = new System.Windows.Forms.Label();
             this.btnEliminarLibro = new System.Windows.Forms.Button();
-            this.btnModificacionLibro = new System.Windows.Forms.Button();
+            this.btnModificacionLibros = new System.Windows.Forms.Button();
             this.btnAltaLibro = new System.Windows.Forms.Button();
             this.dgwLibros = new System.Windows.Forms.DataGridView();
             this.btnConsultaLibros = new System.Windows.Forms.Button();
@@ -69,15 +69,15 @@
             this.btnEliminarLibro.UseVisualStyleBackColor = true;
             this.btnEliminarLibro.Click += new System.EventHandler(this.btnEliminarLibro_Click);
             // 
-            // btnModificacionLibro
+            // btnModificacionLibros
             // 
-            this.btnModificacionLibro.Location = new System.Drawing.Point(163, 61);
-            this.btnModificacionLibro.Name = "btnModificacionLibro";
-            this.btnModificacionLibro.Size = new System.Drawing.Size(145, 43);
-            this.btnModificacionLibro.TabIndex = 3;
-            this.btnModificacionLibro.Text = "Modificación Libro";
-            this.btnModificacionLibro.UseVisualStyleBackColor = true;
-            this.btnModificacionLibro.Click += new System.EventHandler(this.button2_Click);
+            this.btnModificacionLibros.Location = new System.Drawing.Point(163, 61);
+            this.btnModificacionLibros.Name = "btnModificacionLibros";
+            this.btnModificacionLibros.Size = new System.Drawing.Size(145, 43);
+            this.btnModificacionLibros.TabIndex = 3;
+            this.btnModificacionLibros.Text = "Modificación Libro";
+            this.btnModificacionLibros.UseVisualStyleBackColor = true;
+            this.btnModificacionLibros.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAltaLibro
             // 
@@ -126,12 +126,12 @@
             this.Controls.Add(this.btnConsultaLibros);
             this.Controls.Add(this.dgwLibros);
             this.Controls.Add(this.btnAltaLibro);
-            this.Controls.Add(this.btnModificacionLibro);
+            this.Controls.Add(this.btnModificacionLibros);
             this.Controls.Add(this.btnEliminarLibro);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.btnPruebaConexion);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "My App Biblioteca";
             ((System.ComponentModel.ISupportInitialize)(this.dgwLibros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -143,7 +143,7 @@
         private System.Windows.Forms.Button btnPruebaConexion;
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Button btnEliminarLibro;
-        private System.Windows.Forms.Button btnModificacionLibro;
+        private System.Windows.Forms.Button btnModificacionLibros;
         private System.Windows.Forms.Button btnAltaLibro;
         private System.Windows.Forms.DataGridView dgwLibros;
         private System.Windows.Forms.Button btnConsultaLibros;

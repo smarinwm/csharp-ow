@@ -33,10 +33,6 @@ namespace Presentacion
             lblResultado.Visible = true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnAltaLibro_Click(object sender, EventArgs e)
         {
@@ -44,6 +40,13 @@ namespace Presentacion
             pantallaAlta.ShowDialog();
             dgwLibros.DataSource = new Negocio.Management.LibroManagement().ObtenerLibros();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Negocio.EntitiesDTO.LibrosDTO libroSeleccionado = dgwLibros.CurrentRow.DataBoundItem as Negocio.EntitiesDTO.LibrosDTO;
+            AltaLibro pantallaAlta = new AltaLibro(libroSeleccionado);
+            pantallaAlta.ShowDialog();
         }
 
         private void btnEliminarLibro_Click(object sender, EventArgs e)
