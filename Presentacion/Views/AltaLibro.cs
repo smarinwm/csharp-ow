@@ -29,13 +29,29 @@ namespace Presentacion.Views
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            LibrosDTO libro = new LibrosDTO();
-            libro.Nombre = txtNombre.Text;
-            libro.Autor = txtAutor.Text;
-            libro.idCategoria = new Negocio.Management.LibroManagement().ObtenerCategorias().Where(b => b.Nombre == cmbCategoriaLibro.Text).First().idCategoria;
-            libro.FechaPublicacion = DateTime.Now;
 
-            new Negocio.Management.LibroManagement().AltaLibro(libro);
+
+            if (libroMod != null)
+            {
+                libroMod.Nombre = txtNombre.Text;
+                libroMod.Autor = txtAutor.Text;
+                libroMod.idCategoria = new Negocio.Management.LibroManagement().ObtenerCategorias().Where(b => b.Nombre == cmbCategoriaLibro.Text).First().idCategoria;
+                libroMod.FechaPublicacion = DateTime.Now;
+
+                new Negocio.Management.LibroManagement().ModificarLibro(libroMod);  
+
+            }
+            else
+            {
+                LibrosDTO libro = new LibrosDTO();
+                libro.Nombre = txtNombre.Text;
+                libro.Autor = txtAutor.Text;
+                libro.idCategoria = new Negocio.Management.LibroManagement().ObtenerCategorias().Where(b => b.Nombre == cmbCategoriaLibro.Text).First().idCategoria;
+                libro.FechaPublicacion = DateTime.Now;
+
+                new Negocio.Management.LibroManagement().AltaLibro(libro);
+
+            }
 
             this.Close();
 
