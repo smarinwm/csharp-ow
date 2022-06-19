@@ -17,7 +17,7 @@ namespace Datos.Infrastructure
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Libro()
         {
-            this.LibrosUnidades = new HashSet<LibrosUnidade>();
+            this.LibrosUnidades = new HashSet<LibrosUnidades>();
         }
     
         public int idLibro { get; set; }
@@ -28,6 +28,6 @@ namespace Datos.Infrastructure
     
         public virtual Categoria Categoria { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LibrosUnidade> LibrosUnidades { get; set; }
+        public virtual ICollection<LibrosUnidades> LibrosUnidades { get; set; }
     }
 }

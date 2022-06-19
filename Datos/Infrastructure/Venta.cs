@@ -20,6 +20,6 @@ namespace Datos.Infrastructure
         public string NombreCliente { get; set; }
         public decimal Precio { get; set; }
     
-        public virtual LibrosUnidade LibrosUnidade { get; set; }
+        public virtual LibrosUnidades LibrosUnidade { get; set; }
     }
 }

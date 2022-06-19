@@ -1,9 +1,7 @@
-﻿using System;
+﻿using Datos.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Datos.Infrastructure;
 
 namespace Datos.Repository
 {
@@ -99,24 +97,30 @@ namespace Datos.Repository
 
         public void EliminarLibro(Int32 idLibro)
         {
-            try
+
+            using (var contexto = new BibliotecaEntities())
             {
-                using (var contexto = new BibliotecaEntities())
+                List<LibrosUnidades> libroConUnidades = contexto.LibrosUnidades.Where(b => b.idLibroUnidades == idLibro).ToList();
+                Libro libroEliminar = contexto.Libroes.Where(b => b.idLibro == idLibro).First();
+
+                if (libroConUnidades.Count > 0)
                 {
-                    Libro libroEliminar = contexto.Libroes.Where(b => b.idLibro == idLibro).First();
+                    contexto.LibrosUnidades.RemoveRange(libroConUnidades);
+                    contexto.Entry(libroEliminar).State = System.Data.Entity.EntityState.Deleted;
+
+                }
+                else
+                {
                     contexto.Entry(libroEliminar).State = System.Data.Entity.EntityState.Deleted;
                     contexto.SaveChanges();
                 }
 
-            }
-            catch (Exception)
-            {
-                throw;
-            }
 
-
+            }
 
         }
+
+
 
     }
 }
