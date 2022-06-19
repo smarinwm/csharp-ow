@@ -47,6 +47,8 @@ namespace Presentacion
             Negocio.EntitiesDTO.LibrosDTO libroSeleccionado = dgwLibros.CurrentRow.DataBoundItem as Negocio.EntitiesDTO.LibrosDTO;
             AltaLibro pantallaAlta = new AltaLibro(libroSeleccionado);
             pantallaAlta.ShowDialog();
+            dgwLibros.DataSource = new Negocio.Management.LibroManagement().ObtenerLibros();
+
         }
 
         private void btnEliminarLibro_Click(object sender, EventArgs e)
