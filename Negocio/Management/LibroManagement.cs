@@ -87,6 +87,13 @@ namespace Negocio.Management
         }
 
 
+        public Boolean VerificarUnidades(Int32 idLibro)
+        {
+            return new Datos.Repository.LibrosRepositorio().VerificarUnidades(idLibro);
+
+        }
+
+
         public List<LibroConUnidadesDTO> ObtenerLibrosUnidades()
         {
 

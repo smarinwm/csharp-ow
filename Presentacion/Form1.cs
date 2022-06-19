@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Presentacion.Views;
+using System;
 using System.Windows.Forms;
-using Negocio;
-using Presentacion.Views;
 
 
 namespace Presentacion
@@ -53,16 +45,26 @@ namespace Presentacion
 
         private void btnEliminarLibro_Click(object sender, EventArgs e)
         {
+            if (dgwLibros.Rows.Count > 0)
+            {
+                Negocio.EntitiesDTO.LibrosDTO libroSeleccionado = dgwLibros.CurrentRow.DataBoundItem as Negocio.EntitiesDTO.LibrosDTO;
 
-            Negocio.EntitiesDTO.LibrosDTO libroSeleccionado = dgwLibros.CurrentRow.DataBoundItem as Negocio.EntitiesDTO.LibrosDTO;
-            new Negocio.Management.LibroManagement().EliminarLibro(libroSeleccionado);
-            dgwLibros.DataSource = new Negocio.Management.LibroManagement().ObtenerLibros();
+                if (new Negocio.Management.LibroManagement().VerificarUnidades(libroSeleccionado.idLibro))
+                {
+                    DialogResult Respuesta = MessageBox.Show("Este libro contiene unidades" + System.Environment.NewLine + "¡Estas seguro de eliminarlo?", "Validar eliminar", MessageBoxButtons.YesNo);
+                    if (Respuesta == DialogResult.Yes)
+                    {
+                        new Negocio.Management.LibroManagement().EliminarLibro(libroSeleccionado);
+                    }
+                }
 
-         }
+                dgwLibros.DataSource = new Negocio.Management.LibroManagement().ObtenerLibros();
+            }
+        }
 
         private void btnConsultaLibros_Click(object sender, EventArgs e)
         {
-            
+
             dgwLibros.DataSource = new Negocio.Management.LibroManagement().ObtenerLibros();
 
         }

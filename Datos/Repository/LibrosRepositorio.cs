@@ -127,9 +127,9 @@ namespace Datos.Repository
                 libroConUnidades = contexto.LibrosUnidades.Where(b => b.idLibro == idLibro).ToList();
             }
                 return libroConUnidades.Count > 0;
-            
-
         }
+
+
 
     }
 }
