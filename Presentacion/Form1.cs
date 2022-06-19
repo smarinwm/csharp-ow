@@ -54,7 +54,11 @@ namespace Presentacion
         private void btnEliminarLibro_Click(object sender, EventArgs e)
         {
 
-        }
+            Negocio.EntitiesDTO.LibrosDTO libroSeleccionado = dgwLibros.CurrentRow.DataBoundItem as Negocio.EntitiesDTO.LibrosDTO;
+            new Negocio.Management.LibroManagement().EliminarLibro(libroSeleccionado);
+            dgwLibros.DataSource = new Negocio.Management.LibroManagement().ObtenerLibros();
+
+         }
 
         private void btnConsultaLibros_Click(object sender, EventArgs e)
         {
