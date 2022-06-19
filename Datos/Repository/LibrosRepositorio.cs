@@ -90,12 +90,33 @@ namespace Datos.Repository
                 }
 
             }
-            catch
+            catch (Exception)
             {
                 throw;
             }
         }
 
+
+        public void EliminarLibro(Int16 idLibro)
+        {
+            try
+            {
+                using (var contexto = new BibliotecaEntities())
+                {
+                    Libro libroEliminar = contexto.Libroes.Where(b => b.idLibro == idLibro).First();
+                    contexto.Entry(libroEliminar).State = System.Data.Entity.EntityState.Deleted;
+                    contexto.SaveChanges();
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+
+
+        }
 
     }
 }
