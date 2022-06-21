@@ -22,11 +22,13 @@ namespace Negocio.Management
             {
                 LibrosDTO librosDTO = new LibrosDTO();
 
-                librosDTO.idLibro = item.idLibro;
-                librosDTO.Nombre = item.Nombre;
-                librosDTO.Autor = item.Autor;
-                librosDTO.FechaPublicacion = item.FechaPublicacion;
-                librosDTO.idCategoria= item.idCategoria;
+                Negocio.Utils.parse(item, ref librosDTO);
+
+                //librosDTO.idLibro = item.idLibro;
+                //librosDTO.Nombre = item.Nombre;
+                //librosDTO.Autor = item.Autor;
+                //librosDTO.FechaPublicacion = item.FechaPublicacion;
+                //librosDTO.idCategoria= item.idCategoria;
 
                 ListadoRetorno.Add(librosDTO);
 
@@ -45,8 +47,10 @@ namespace Negocio.Management
             {
                 CategoriaDTO categoriaDTO = new CategoriaDTO();
 
-                categoriaDTO.idCategoria = item.idCategoria;
-                categoriaDTO.Nombre = item.Nombre;
+                Negocio.Utils.parse(item, ref categoriaDTO);
+
+                //categoriaDTO.idCategoria = item.idCategoria;
+                //categoriaDTO.Nombre = item.Nombre;
 
                 ListadoRetorno.Add(categoriaDTO);
 
@@ -58,21 +62,28 @@ namespace Negocio.Management
         {
 
             Libro libro = new Libro();
-            libro.idCategoria = libroAlta.idCategoria;
-            libro.Nombre = libroAlta.Nombre;
-            libro.Autor = libroAlta.Autor;
-            libro.FechaPublicacion = libroAlta.FechaPublicacion;
+
+            Negocio.Utils.parse(libroAlta, ref libro);
+
+            //libro.idCategoria = libroAlta.idCategoria;
+            //libro.Nombre = libroAlta.Nombre;
+            //libro.Autor = libroAlta.Autor;
+            //libro.FechaPublicacion = libroAlta.FechaPublicacion;
+
             new Datos.Repository.LibrosRepositorio().AltaLibro(libro);
         }
 
         public void ModificarLibro(LibrosDTO libroModificado)
         {
             Libro libro = new Libro();
-            libro.idLibro = libroModificado.idLibro;
-            libro.idCategoria = libroModificado.idCategoria;
-            libro.Nombre = libroModificado.Nombre;
-            libro.Autor = libroModificado.Autor;
-            libro.FechaPublicacion = libroModificado.FechaPublicacion;
+
+            Negocio.Utils.parse(libroModificado, ref libro);
+
+            //libro.idLibro = libroModificado.idLibro;
+            //libro.idCategoria = libroModificado.idCategoria;
+            //libro.Nombre = libroModificado.Nombre;
+            //libro.Autor = libroModificado.Autor;
+            //libro.FechaPublicacion = libroModificado.FechaPublicacion;
 
             new Datos.Repository.LibrosRepositorio().ModificarLibro(libro);
 
@@ -104,9 +115,11 @@ namespace Negocio.Management
             {
                 LibroConUnidadesDTO librosDTO = new LibroConUnidadesDTO();
 
-                librosDTO.AutorDelLibro = item.AutorDelLibro;
-                librosDTO.NombreDelLibro = item.NombreDelLibro;
-                librosDTO.Unidades = item.Unidades;
+                Negocio.Utils.parse(item, ref librosDTO);
+
+                //librosDTO.AutorDelLibro = item.AutorDelLibro;
+                //librosDTO.NombreDelLibro = item.NombreDelLibro;
+                //librosDTO.Unidades = item.Unidades;
 
                 ListadoRetorno.Add(librosDTO);
 

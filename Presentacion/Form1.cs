@@ -57,6 +57,10 @@ namespace Presentacion
                         new Negocio.Management.LibroManagement().EliminarLibro(libroSeleccionado);
                     }
                 }
+                else
+                {
+                    new Negocio.Management.LibroManagement().EliminarLibro(libroSeleccionado);
+                }
 
                 dgwLibros.DataSource = new Negocio.Management.LibroManagement().ObtenerLibros();
             }
