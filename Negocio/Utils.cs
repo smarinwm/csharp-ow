@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Negocio
 {
@@ -21,7 +17,7 @@ namespace Negocio
             {
                 PropertyInfo targetObj = targetType.GetProperty(p.Name);
 
-                if(targetObj == null)
+                if (targetObj == null)
                     continue;
 
                 targetObj.SetValue(destObject, p.GetValue(sourceObject, null), null);

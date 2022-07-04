@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Negocio.EntitiesDTO
+﻿namespace Negocio.EntitiesDTO
 {
-    public class LibrosDTO
+    public class LibrosDto
     {
         public int idLibro { get; set; }
         public int idCategoria { get; set; }

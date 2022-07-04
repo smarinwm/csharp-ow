@@ -36,7 +36,7 @@ namespace Presentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Negocio.EntitiesDTO.LibrosDTO libroSeleccionado = dgwLibros.CurrentRow.DataBoundItem as Negocio.EntitiesDTO.LibrosDTO;
+            Negocio.EntitiesDTO.LibrosDto libroSeleccionado = dgwLibros.CurrentRow.DataBoundItem as Negocio.EntitiesDTO.LibrosDto;
             AltaLibro pantallaAlta = new AltaLibro(libroSeleccionado);
             pantallaAlta.ShowDialog();
             dgwLibros.DataSource = new Negocio.Management.LibroManagement().ObtenerLibros();
@@ -47,7 +47,7 @@ namespace Presentacion
         {
             if (dgwLibros.Rows.Count > 0)
             {
-                Negocio.EntitiesDTO.LibrosDTO libroSeleccionado = dgwLibros.CurrentRow.DataBoundItem as Negocio.EntitiesDTO.LibrosDTO;
+                Negocio.EntitiesDTO.LibrosDto libroSeleccionado = dgwLibros.CurrentRow.DataBoundItem as Negocio.EntitiesDTO.LibrosDto;
 
                 if (new Negocio.Management.LibroManagement().VerificarUnidades(libroSeleccionado.idLibro))
                 {

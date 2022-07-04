@@ -74,23 +74,15 @@ namespace Datos.Repository
 
         public void ModificarLibro(Libro nuevoLibro)
         {
-            try
+            using (var contexto = new BibliotecaEntities())
             {
-                using (var contexto = new BibliotecaEntities())
-                {
-                    Libro libroOriginal = contexto.Libroes.Where(b => b.idLibro == nuevoLibro.idLibro).First();
-                    libroOriginal.Nombre = nuevoLibro.Nombre;
-                    libroOriginal.Autor = nuevoLibro.Autor;
-                    libroOriginal.idCategoria = nuevoLibro.idCategoria;
+                Libro libroOriginal = contexto.Libroes.Where(b => b.idLibro == nuevoLibro.idLibro).First();
+                libroOriginal.Nombre = nuevoLibro.Nombre;
+                libroOriginal.Autor = nuevoLibro.Autor;
+                libroOriginal.idCategoria = nuevoLibro.idCategoria;
 
-                    contexto.Entry(libroOriginal).State = System.Data.Entity.EntityState.Modified;
-                    contexto.SaveChanges();
-                }
-
-            }
-            catch (Exception)
-            {
-                throw;
+                contexto.Entry(libroOriginal).State = System.Data.Entity.EntityState.Modified;
+                contexto.SaveChanges();
             }
         }
 
@@ -121,12 +113,12 @@ namespace Datos.Repository
 
         public Boolean VerificarUnidades(Int32 idLibro)
         {
-            List<LibrosUnidade> libroConUnidades = new List<LibrosUnidade>();  
+            List<LibrosUnidade> libroConUnidades = new List<LibrosUnidade>();
             using (var contexto = new BibliotecaEntities())
             {
                 libroConUnidades = contexto.LibrosUnidades.Where(b => b.idLibro == idLibro).ToList();
             }
-                return libroConUnidades.Count > 0;
+            return libroConUnidades.Count > 0;
         }
 
 

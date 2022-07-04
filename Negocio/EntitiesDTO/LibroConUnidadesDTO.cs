@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Negocio.EntitiesDTO
 {
-    public class LibroConUnidadesDTO
+    public class LibroConUnidadesDto
     {
         public string NombreDelLibro { get; set; }
         public string AutorDelLibro { get; set; }

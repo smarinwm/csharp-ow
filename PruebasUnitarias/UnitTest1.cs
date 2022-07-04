@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using Negocio;
 
 namespace PruebasUnitarias
 {
@@ -13,7 +12,7 @@ namespace PruebasUnitarias
 
             try
             {
-                Negocio.EntitiesDTO.LibrosDTO libroEjemplo = new Negocio.EntitiesDTO.LibrosDTO();
+                Negocio.EntitiesDTO.LibrosDto libroEjemplo = new Negocio.EntitiesDTO.LibrosDto();
                 libroEjemplo.Nombre = "Prueba";
                 libroEjemplo.Autor = "Autor";
                 libroEjemplo.FechaPublicacion = DateTime.Now;

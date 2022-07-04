@@ -1,9 +1,7 @@
-﻿using System;
+﻿using Datos.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Datos.Infrastructure;
 
 
 namespace Datos.Repository
@@ -17,7 +15,7 @@ namespace Datos.Repository
             {
                 using (var contexto = new BibliotecaEntities())
                 {
-                  List<Libro> librosRetorno =  contexto.Libroes.ToList();
+                    List<Libro> librosRetorno = contexto.Libroes.ToList();
                 }
                 return true;
             }

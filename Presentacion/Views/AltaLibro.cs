@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Negocio.EntitiesDTO;
+﻿using Negocio.EntitiesDTO;
 using Negocio.Management;
+using System;
+using System.Data;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Presentacion.Views
 {
     public partial class AltaLibro : Form
     {
-        public LibrosDTO libroMod;
-        public AltaLibro(LibrosDTO libro)
+        public LibrosDto libroMod;
+        public AltaLibro(LibrosDto libro)
         {
             libroMod = libro;
             InitializeComponent();
@@ -35,18 +30,18 @@ namespace Presentacion.Views
             {
                 libroMod.Nombre = txtNombre.Text;
                 libroMod.Autor = txtAutor.Text;
-                libroMod.idCategoria = new Negocio.Management.LibroManagement().ObtenerCategorias().Where(b => b.Nombre == cmbCategoriaLibro.Text).First().idCategoria;
+                libroMod.idCategoria = new LibroManagement().ObtenerCategorias().First(b => b.Nombre == cmbCategoriaLibro.Text).idCategoria;
                 libroMod.FechaPublicacion = DateTime.Now;
 
-                new Negocio.Management.LibroManagement().ModificarLibro(libroMod);  
+                new Negocio.Management.LibroManagement().ModificarLibro(libroMod);
 
             }
             else
             {
-                LibrosDTO libro = new LibrosDTO();
+                LibrosDto libro = new LibrosDto();
                 libro.Nombre = txtNombre.Text;
                 libro.Autor = txtAutor.Text;
-                libro.idCategoria = new Negocio.Management.LibroManagement().ObtenerCategorias().Where(b => b.Nombre == cmbCategoriaLibro.Text).First().idCategoria;
+                libro.idCategoria = new LibroManagement().ObtenerCategorias().First(b => b.Nombre == cmbCategoriaLibro.Text).idCategoria;
                 libro.FechaPublicacion = DateTime.Now;
 
                 new Negocio.Management.LibroManagement().AltaLibro(libro);
@@ -70,10 +65,10 @@ namespace Presentacion.Views
             {
                 txtNombre.Text = libroMod.Nombre;
                 txtAutor.Text = libroMod.Autor;
-                cmbCategoriaLibro.Text = new Negocio.Management.LibroManagement().ObtenerCategorias().Where(b => b.idCategoria == libroMod.idCategoria).First().Nombre;
-               
+                cmbCategoriaLibro.Text = new LibroManagement().ObtenerCategorias().First(b => b.idCategoria == libroMod.idCategoria).Nombre;
+
             }
-            
+
         }
     }
 }
